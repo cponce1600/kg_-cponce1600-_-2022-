@@ -31,4 +31,16 @@ function getDigits(sInt){
   
 }
 
-getPhonetic([12123,54]);
+//Here we get our pramaters from the console
+var myArgs = process.argv.slice(2);
+console.log('myArgs: ', myArgs);
+
+//This array will be filled with the parameters given in the console 
+numbers = [];
+for (arg in myArgs) {
+  var number = parseInt(myArgs[arg]);
+  numbers.push(number);
+}
+
+//We can now get the phonetic
+getPhonetic(numbers);
