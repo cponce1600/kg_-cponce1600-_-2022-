@@ -16,9 +16,7 @@ function getPhonetic(intArr){
     sInt = getDigits(intArr[num].toString());
     sIntArr.push(sInt);
   }
-  
-  console.log(sIntArr);
-  sIntArr.length = 0;
+  console.log(sIntArr.toString());
 }
 
 //This function is only used by getPhonetic
@@ -28,12 +26,10 @@ function getDigits(sInt){
     return "";
   else
     return digToLit[sInt.charAt(0)] + getDigits(sInt.substring(1));
-  
 }
 
 //Here we get our pramaters from the console
 var myArgs = process.argv.slice(2);
-console.log('myArgs: ', myArgs);
 
 //This array will be filled with the parameters given in the console 
 numbers = [];
